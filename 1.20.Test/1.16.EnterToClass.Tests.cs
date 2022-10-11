@@ -186,7 +186,7 @@ namespace _1._20.Test
         [TestCase(-789,12304, false)]
         [TestCase(08,6573, false)]
         [TestCase(9805,74122, false)]
-        [TestCase(0258,7401, false)]
+        [TestCase(02399,7401, false)]
 
         public void IdenticalDigitsInTwoNumbersTest(int a, int b, bool expected)
         {

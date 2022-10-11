@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//Классы с методами из 16 задания
+//Классы с методами из блока 16 задания
 
 namespace _1._20
 {

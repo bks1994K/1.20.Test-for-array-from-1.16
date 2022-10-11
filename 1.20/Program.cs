@@ -35,7 +35,7 @@ Console.WriteLine(count);
 
 //8
 
-int mirrow = EnterToClass.MirroringEnteredNumber(-1011);
+int mirrow = EnterToClass.MirroringEnteredNumber(-1021);
 Console.WriteLine(mirrow);
 
 //9
