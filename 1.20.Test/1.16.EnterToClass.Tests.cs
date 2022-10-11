@@ -1,4 +1,5 @@
 using _1._20;
+using System;
 
 namespace _1._20.Test
 {
@@ -10,12 +11,24 @@ namespace _1._20.Test
         [TestCase(5, 10, 0, -2)]
         [TestCase(100, -150, -50, 1)]
         [TestCase(7, 40, 40, 0)]
-        public void MinusAndDivision(int a, int b, int c, int expected)
+        public void MinusAndDivisionTest(int a, int b, int c, int expected)
         {
             int actual = EnterToClass.MinusAndDivision(a, b, c);
 
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+
+        public void MinusAndDivisionTest_When_AIsZero_ShuldArgumentExaption()
+        {
+            int a = 0;
+            int b = 1;
+            int c = 4;
+
+            Assert.Throws<ArgumentException>(() => EnterToClass.MinusAndDivision(a, b, c));
+        }
+
 
         //2
 
@@ -32,7 +45,7 @@ namespace _1._20.Test
         [TestCase(-3, -3, 9)]
 
 
-        public void PlusOrMultiplicationOrMinus(int a, int b, int expected)
+        public void PlusOrMultiplicationOrMinusTest(int a, int b, int expected)
         {
             int actual = EnterToClass.PlusOrMultiplicationOrMinus(a, b);
 
@@ -47,12 +60,25 @@ namespace _1._20.Test
         [TestCase(51, "Пятьдесят один")]
         [TestCase(99, "Девяносто девять")]
 
-        public void ConvertingTwodigitNumberToString(int a, string expected)
+        public void ConvertingTwodigitNumberToStringTest(int a, string expected)
         {
             string actual = EnterToClass.ConvertingTwodigitNumberToString(a);
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestCase(1)]
+        [TestCase(9)]
+        [TestCase(100)]
+        [TestCase(150)]
+        [TestCase(-10)]
+        [TestCase(0)]
+
+        public void ConvertingTwodigitNumberToStringTest_WhenNumberIsNotInRange(int a)
+        {
+                       Assert.Throws<ArgumentException>(() => EnterToClass.ConvertingTwodigitNumberToString(a));
+        }
+
 
         //4
 
@@ -76,7 +102,7 @@ namespace _1._20.Test
         [TestCase(-29, false)]
     
 
-        public void NumberInRangeFrom0To10OrFrom20To30OFrom40To50(int a, bool expected)
+        public void NumberInRangeFrom0To10OrFrom20To30OFrom40To50Test(int a, bool expected)
         {
             bool actual = EnterToClass.NumberInRangeFrom0To10OrFrom20To30OFrom40To50(a);
 
@@ -89,7 +115,7 @@ namespace _1._20.Test
         [TestCase(5,15,21)]
         [TestCase(-7,7,0)]
 
-        public void SumOfTheNumbersInsideAAndBThatAreDivisibleBySeven(int a, int b, int expected)
+        public void SumOfTheNumbersInsideAAndBThatAreDivisibleBySevenTest(int a, int b, int expected)
         {
             int actual = EnterToClass.SumOfTheNumbersInsideAAndBThatAreDivisibleBySeven(a, b);
 
@@ -104,11 +130,20 @@ namespace _1._20.Test
         [TestCase(4,2)]
         [TestCase(13,144)]
 
-        public void ReturnsNumberFromFibonacciSeries(int a, int expected)
+        public void ReturnsNumberFromFibonacciSeriesTest(int a, int expected)
         {
             int actual = EnterToClass.ReturnsNumberFromFibonacciSeries(a);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0)]
+        [TestCase(-1)]
+        [TestCase(-20)]
+
+        public void ReturnsNumberFromFibonacciSeriesTest_WhenALessThanOrEqualToZero(int a)
+               {
+            Assert.Throws<ArgumentException>(() => EnterToClass.ReturnsNumberFromFibonacciSeries(a));
         }
 
         //7
@@ -120,7 +155,7 @@ namespace _1._20.Test
         [TestCase(84684, 0)]
         [TestCase(-89745, 3)]
 
-        public void CountOddDigitsAreTheNumbers(int a, int expected)
+        public void CountOddDigitsAreTheNumbersTest(int a, int expected)
         {
             int actual = EnterToClass.CountOddDigitsAreTheNumbers(a);
 
@@ -134,7 +169,7 @@ namespace _1._20.Test
         [TestCase(6580,0856)]
         [TestCase(-6329,-9236)]
 
-        public void MirroringEnteredNumber(int a, int expected)
+        public void MirroringEnteredNumberTest(int a, int expected)
         {
             int actual = EnterToClass.MirroringEnteredNumber(a);
 
@@ -151,8 +186,9 @@ namespace _1._20.Test
         [TestCase(-789,12304, false)]
         [TestCase(08,6573, false)]
         [TestCase(9805,74122, false)]
+        [TestCase(0258,7401, false)]
 
-        public void IdenticalDigitsInTwoNumbers(int a, int b, bool expected)
+        public void IdenticalDigitsInTwoNumbersTest(int a, int b, bool expected)
         {
              bool actual = EnterToClass.IdenticalDigitsInTwoNumbers(a, b);
 

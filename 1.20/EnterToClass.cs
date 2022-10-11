@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,10 @@ namespace _1._20
 
         public static int MinusAndDivision(int a, int b, int c)
         {
+            if (a == 0)
+            {
+                throw new ArgumentException("a==0 ");
+            }
             int result = (c - b) / a;
             return result;
         }
@@ -59,24 +64,28 @@ namespace _1._20
 
         public static string ConvertingTwodigitNumberToString(int number)
         {
-            if (number >= 10 && number <= 99)
+            if (number < 10 || number > 99)
+            {
+                throw new ArgumentException("number is not included in the range");
+            }
             {
                 int a = number / 10;
                 int b = number % 10;
                 string x = "";
                 string y = "";
+
                 if (number >= 10 && number <= 19)
                 {
                     switch (number)
                     {
                         case 10:
-                            x ="Десять";
+                            x = "Десять";
                             break;
                         case 11:
-                            x ="Одиннадцать";
+                            x = "Одиннадцать";
                             break;
                         case 12:
-                            x ="Двенадцать";
+                            x = "Двенадцать";
                             break;
                         case 13:
                             x = "Тринадцать";
@@ -203,6 +212,11 @@ namespace _1._20
 
         public static int ReturnsNumberFromFibonacciSeries(int number)
         {
+            if (number <= 0)
+            {
+                throw new ArgumentException("number should be >0");
+            }
+
             {
                 int a = 0;
                 int b = 1;
@@ -258,7 +272,7 @@ namespace _1._20
         {
             int tmp = 0;
             string result = "";
-            bool isPositiv = number >=0;
+            bool isPositiv = number >= 0;
 
             if (!isPositiv)
             {

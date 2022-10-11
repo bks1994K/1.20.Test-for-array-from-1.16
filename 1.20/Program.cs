@@ -10,7 +10,7 @@ Console.WriteLine(number);
 
 //1/16/3
 
-string a = EnterToClass.ConvertingTwodigitNumberToString(15);
+string a = EnterToClass.ConvertingTwodigitNumberToString(55);
 Console.WriteLine(a);
 
 //4
@@ -25,7 +25,7 @@ Console.WriteLine(sum);
 
 //6
 
-int c = EnterToClass.ReturnsNumberFromFibonacciSeries(2);
+int c = EnterToClass.ReturnsNumberFromFibonacciSeries(20);
 Console.WriteLine(c);
 
 //7
@@ -40,5 +40,5 @@ Console.WriteLine(mirrow);
 
 //9
 
-bool ident = EnterToClass.IdenticalDigitsInTwoNumbers(-7214, 7897);
+bool ident = EnterToClass.IdenticalDigitsInTwoNumbers(01254,8707);
 Console.WriteLine(ident);
