@@ -1,24 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 //Классы с методами из блока 16 задания
 
 namespace _1._20
 {
     public static class EnterToClass
-
     {
-
         //1
         public static int ReadFromConsole()
         {
             Console.WriteLine("Введите число");
             string s = Console.ReadLine();
             int number = Convert.ToInt32(s);
+
             return number;
         }
 
@@ -29,6 +22,7 @@ namespace _1._20
                 throw new ArgumentException("a==0 ");
             }
             int result = (c - b) / a;
+
             return result;
         }
 
@@ -47,7 +41,6 @@ namespace _1._20
             if (a > b)
             {
                 return resultPlus;
-
             }
             else if (a < b)
             {
@@ -62,119 +55,116 @@ namespace _1._20
 
         //3
 
-        public static string ConvertingTwodigitNumberToString(int number)
+        public static string ConvertingTwoDigitNumberToString(int number)
         {
             if (number < 10 || number > 99)
             {
                 throw new ArgumentException("number is not included in the range");
             }
+            int a = number / 10;
+            int b = number % 10;
+            string x = "";
+            string y = "";
+
+            if (number >= 10 && number <= 19)
             {
-                int a = number / 10;
-                int b = number % 10;
-                string x = "";
-                string y = "";
-
-                if (number >= 10 && number <= 19)
+                switch (number)
                 {
-                    switch (number)
-                    {
-                        case 10:
-                            x = "Десять";
-                            break;
-                        case 11:
-                            x = "Одиннадцать";
-                            break;
-                        case 12:
-                            x = "Двенадцать";
-                            break;
-                        case 13:
-                            x = "Тринадцать";
-                            break;
-                        case 14:
-                            x = "Четырнадцать";
-                            break;
-                        case 15:
-                            x = "Пятнадцать";
-                            break;
-                        case 16:
-                            x = "Шестнадцать";
-                            break;
-                        case 17:
-                            x = "Семнадцать";
-                            break;
-                        case 18:
-                            x = "Восемнадцать";
-                            break;
-                        case 19:
-                            x = "Девятнадцать";
-                            break;
-                    }
+                    case 10:
+                        x = "Десять";
+                        break;
+                    case 11:
+                        x = "Одиннадцать";
+                        break;
+                    case 12:
+                        x = "Двенадцать";
+                        break;
+                    case 13:
+                        x = "Тринадцать";
+                        break;
+                    case 14:
+                        x = "Четырнадцать";
+                        break;
+                    case 15:
+                        x = "Пятнадцать";
+                        break;
+                    case 16:
+                        x = "Шестнадцать";
+                        break;
+                    case 17:
+                        x = "Семнадцать";
+                        break;
+                    case 18:
+                        x = "Восемнадцать";
+                        break;
+                    case 19:
+                        x = "Девятнадцать";
+                        break;
                 }
-                else
-                {
-                    switch (a)
-                    {
-                        case 2:
-                            x = "Двадцать";
-                            break;
-                        case 3:
-                            x = "Тридцать";
-                            break;
-                        case 4:
-                            x = "Сорок";
-                            break;
-                        case 5:
-                            x = "Пятьдесят";
-                            break;
-                        case 6:
-                            x = "Шестьдесят";
-                            break;
-                        case 7:
-                            x = "Семдесят";
-                            break;
-                        case 8:
-                            x = "Восемдесят";
-                            break;
-                        case 9:
-                            x = "Девяносто";
-                            break;
-                    }
-                    switch (b)
-                    {
-                        case 1:
-                            y = "один";
-                            break;
-                        case 2:
-                            y = "два";
-                            break;
-                        case 3:
-                            y = "три";
-                            break;
-                        case 4:
-                            y = "четыре";
-                            break;
-                        case 5:
-                            y = "пять";
-                            break;
-                        case 6:
-                            y = "шесть";
-                            break;
-                        case 7:
-                            y = "семь";
-                            break;
-                        case 8:
-                            y = "восемь";
-                            break;
-                        case 9:
-                            y = "девять";
-                            break;
-                    }
-
-                }
-                string result = x + " " + y;
-                return result;
             }
-            return "";
+            else
+            {
+                switch (a)
+                {
+                    case 2:
+                        x = "Двадцать";
+                        break;
+                    case 3:
+                        x = "Тридцать";
+                        break;
+                    case 4:
+                        x = "Сорок";
+                        break;
+                    case 5:
+                        x = "Пятьдесят";
+                        break;
+                    case 6:
+                        x = "Шестьдесят";
+                        break;
+                    case 7:
+                        x = "Семдесят";
+                        break;
+                    case 8:
+                        x = "Восемдесят";
+                        break;
+                    case 9:
+                        x = "Девяносто";
+                        break;
+                }
+                switch (b)
+                {
+                    case 1:
+                        y = "один";
+                        break;
+                    case 2:
+                        y = "два";
+                        break;
+                    case 3:
+                        y = "три";
+                        break;
+                    case 4:
+                        y = "четыре";
+                        break;
+                    case 5:
+                        y = "пять";
+                        break;
+                    case 6:
+                        y = "шесть";
+                        break;
+                    case 7:
+                        y = "семь";
+                        break;
+                    case 8:
+                        y = "восемь";
+                        break;
+                    case 9:
+                        y = "девять";
+                        break;
+                }
+            }
+            string result = x + " " + y;
+
+            return result;
         }
 
         //4
@@ -183,8 +173,7 @@ namespace _1._20
         {
             if ((a >= 0 && a <= 10) || (a >= 20 && a <= 30) || (a >= 40 && a <= 50))
             {
-                bool result;
-                return result = true;
+                return true;
             }
             else
             {
@@ -205,6 +194,7 @@ namespace _1._20
                 }
 
             }
+
             return result;
         }
 
@@ -216,34 +206,32 @@ namespace _1._20
             {
                 throw new ArgumentException("number should be >0");
             }
-
+            int a = 0;
+            int b = 1;
+            int c = a + b;
+            int step = 3;
+            if (number >= 3)
             {
-                int a = 0;
-                int b = 1;
-                int c = a + b;
-                int step = 3;
-                if (number >= 3)
+                while (step != number)
                 {
-                    while (step != number)
-                    {
-                        int d = b;
-                        b = c;
-                        c = c + d;
-                        step = step + 1;
-                    }
+                    int d = b;
+                    b = c;
+                    c = c + d;
+                    step = step + 1;
                 }
-                else if (number == 2)
-                {
-                    c = 1;
-                }
-                else if (number == 1)
-                {
-                    c = 0;
-                }
-
-                int result = c;
-                return result;
             }
+            else if (number == 2)
+            {
+                c = 1;
+            }
+            else if (number == 1)
+            {
+                c = 0;
+            }
+
+            int result = c;
+
+            return result;
         }
 
         //7
@@ -262,6 +250,7 @@ namespace _1._20
                 number = number / 10;
             }
             int result = s;
+
             return result;
         }
 
@@ -319,8 +308,6 @@ namespace _1._20
                     tmpb = bb % 10;
                     bb /= 10;
                 }
-
-
             }
             if (tmpa == tmpb)
             {
@@ -330,14 +317,7 @@ namespace _1._20
             {
                 return false;
             }
-
         }
-
-
-
-
-
-
 
     }
 }

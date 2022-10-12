@@ -10,7 +10,7 @@ Console.WriteLine(number);
 
 //1/16/3
 
-string a = EnterToClass.ConvertingTwodigitNumberToString(55);
+string a = EnterToClass.ConvertingTwoDigitNumberToString(55);
 Console.WriteLine(a);
 
 //4

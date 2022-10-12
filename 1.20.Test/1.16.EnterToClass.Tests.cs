@@ -62,7 +62,7 @@ namespace _1._20.Test
 
         public void ConvertingTwodigitNumberToStringTest(int a, string expected)
         {
-            string actual = EnterToClass.ConvertingTwodigitNumberToString(a);
+            string actual = EnterToClass.ConvertingTwoDigitNumberToString(a);
 
             Assert.AreEqual(expected, actual);
         }
@@ -76,7 +76,7 @@ namespace _1._20.Test
 
         public void ConvertingTwodigitNumberToStringTest_WhenNumberIsNotInRange(int a)
         {
-                       Assert.Throws<ArgumentException>(() => EnterToClass.ConvertingTwodigitNumberToString(a));
+                       Assert.Throws<ArgumentException>(() => EnterToClass.ConvertingTwoDigitNumberToString(a));
         }
 
 
