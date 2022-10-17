@@ -1,5 +1,3 @@
-using _1._20;
-using System;
 
 namespace _1._20.Test
 {
@@ -17,7 +15,7 @@ namespace _1._20.Test
         }
 
         [Test]
-        public void MinusAndDivisionTest_When_AIsZero_ShuldArgumentException()
+        public void MinusAndDivisionTest_When_AIsZero_ShouldArgumentException()
         {
             int a = 0;
             int b = 1;
@@ -47,7 +45,7 @@ namespace _1._20.Test
         [TestCase(19, "Девятнадцать ")]
         [TestCase(51, "Пятьдесят один")]
         [TestCase(99, "Девяносто девять")]
-        public void ConvertingTwodigitNumberToStringTest(int a, string expected)
+        public void ConvertingTwoDigitNumberToStringTest(int a, string expected)
         {
             string actual = EnterToClass.ConvertingTwoDigitNumberToString(a);
             Assert.AreEqual(expected, actual);
@@ -58,7 +56,7 @@ namespace _1._20.Test
         [TestCase(150)]
         [TestCase(-10)]
         [TestCase(0)]
-        public void ConvertingTwodigitNumberToStringTest_WhenNumberIsNotInRange(int a)
+        public void ConvertingTwoDigitNumberToStringTest_WhenNumberIsNotInRange(int a)
         {
             Assert.Throws<ArgumentException>(() => EnterToClass.ConvertingTwoDigitNumberToString(a));
         }
